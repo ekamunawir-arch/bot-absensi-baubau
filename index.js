@@ -15,7 +15,7 @@ bot.onText(/\/start/, (msg) => {
           [
             {
               text: "📝 Buka Absensi BPJS",
-              url: "https://www.bpjs-kesehatan.go.id"
+              url: "intent://open#Intent;package=id.go.bpjsesehatan.ihc;End"
             }
           ]
         ]
