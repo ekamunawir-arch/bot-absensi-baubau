@@ -5,20 +5,17 @@ const bot = new TelegramBot(token, { polling: true });
 
 bot.onText(/\/start/, (msg) => {
   const chatId = msg.chat.id;
-
   bot.sendMessage(
     chatId,
-    "Halo 👋\n\nKlik tombol di bawah untuk membuka Absensi BPJS.\n\nJika aplikasi tidak terbuka otomatis, silakan login manual di HP Anda.",
+    "Klik untuk buka aplikasi absensi:",
     {
       reply_markup: {
-        inline_keyboard: [
-          [
-            {
-              text: "📝 Buka Absensi BPJS",
-              url: "intent://open#Intent;package=id.go.bpjsesehatan.ihc;End"
-            }
-          ]
-        ]
+        inline_keyboard: [[
+          {
+            text: "📲 Buka Absensi",
+            url: "intent://open#Intent;package=id.go.bpjsesehatan.ihc;end"
+          }
+        ]]
       }
     }
   );
