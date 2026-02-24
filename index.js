@@ -8,6 +8,18 @@ bot.onText(/\/start/, (msg) => {
 
   bot.sendMessage(
     chatId,
-    "Halo 👋\n\nSilakan buka aplikasi Absensi BPJS langsung dari HP Anda.\n\nJika aplikasi belum terbuka, pastikan sudah terinstall."
+    "Halo 👋\n\nKlik tombol di bawah untuk membuka Absensi BPJS.\n\nJika aplikasi tidak terbuka otomatis, silakan login manual di HP Anda.",
+    {
+      reply_markup: {
+        inline_keyboard: [
+          [
+            {
+              text: "📝 Buka Absensi BPJS",
+              url: "https://www.bpjs-kesehatan.go.id"
+            }
+          ]
+        ]
+      }
+    }
   );
 });
